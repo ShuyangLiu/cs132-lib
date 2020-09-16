@@ -5,7 +5,7 @@ import cs132.IR.sparrowv.*;
 
 public class DepthFirst implements Visitor {
 
-  /*   ArrayList<FunctionDecl> funDecls; */
+  /*   List<FunctionDecl> funDecls; */
   public void visit(Program n) {
     for (FunctionDecl fd: n.funDecls) {
         fd.accept(this);
@@ -14,7 +14,7 @@ public class DepthFirst implements Visitor {
 
   /*   Program parent;
    *   FunctionName functionName;
-   *   ArrayList<Identifier> formalParameters;
+   *   List<Identifier> formalParameters;
    *   Block block; */
   public void visit(FunctionDecl n) {
     for (Identifier fp: n.formalParameters) {
@@ -24,7 +24,7 @@ public class DepthFirst implements Visitor {
   }
 
   /*   FunctionDecl parent;
-   *   ArrayList<Instruction> instructions;
+   *   List<Instruction> instructions;
    *   Identifier return_id; */
   public void visit(Block n) {
     for (Instruction i: n.instructions) {
@@ -121,7 +121,7 @@ public class DepthFirst implements Visitor {
 
   /*   Register lhs;
    *   Register callee;
-   *   ArrayList<Identifier> args; */
+   *   List<Identifier> args; */
   public void visit(Call n) {
   }
 }

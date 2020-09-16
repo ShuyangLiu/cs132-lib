@@ -18,6 +18,14 @@ public class Subtract extends Instruction {
     v.visit(this);
   }
 
+  public <A,R> R accept(ArgRetVisitor<A,R> v, A arg) {
+    return v.visit(this, arg);
+  }
+
+  public <R> R accept(RetVisitor<R> v){
+    return v.visit(this);
+  }
+
   public <A> void accept(ArgVisitor<A> v, A arg) {
     v.visit(this, arg);
   }

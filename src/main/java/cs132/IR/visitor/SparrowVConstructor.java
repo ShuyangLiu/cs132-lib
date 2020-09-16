@@ -2,7 +2,6 @@ package cs132.IR.visitor;
 
 import cs132.IR.token.*;
 import cs132.IR.syntaxtree.*;
-
 import cs132.IR.sparrowv.visitor.*;
 import cs132.IR.registers.Registers;
 import java.util.*;

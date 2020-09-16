@@ -1,6 +1,6 @@
 package cs132.IR.token;
   
-public class FunctionName implements cs132.IR.value.Value {
+public class FunctionName implements value.Value {
   
   public String name;
 

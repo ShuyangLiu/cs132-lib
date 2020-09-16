@@ -18,16 +18,14 @@ public class Label implements Node {
    public void accept(cs132.IR.visitor.Visitor v) {
       v.visit(this);
    }
-public <R,A> R accept(cs132.IR.visitor.GJVisitor<R,A> v, A argu) {
+   public <R,A> R accept(cs132.IR.visitor.GJVisitor<R,A> v, A argu) {
       return v.visit(this,argu);
    }
-public <R> R accept(cs132.IR.visitor.GJNoArguVisitor<R> v) {
+   public <R> R accept(cs132.IR.visitor.GJNoArguVisitor<R> v) {
       return v.visit(this);
    }
-
-public <A> void accept(cs132.IR.visitor.GJVoidVisitor<A> v, A argu) {
+   public <A> void accept(cs132.IR.visitor.GJVoidVisitor<A> v, A argu) {
       v.visit(this,argu);
    }
-
 }
 

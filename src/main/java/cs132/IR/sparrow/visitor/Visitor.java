@@ -5,17 +5,17 @@ import cs132.IR.sparrow.*;
 
 public interface Visitor {
 
-  /*   ArrayList<FunctionDecl> funDecls; */
+  /*   List<FunctionDecl> funDecls; */
   void visit(Program n);
 
   /*   Program parent;
    *   FunctionName functionName;
-   *   ArrayList<Identifier> formalParameters;
+   *   List<Identifier> formalParameters;
    *   Block block; */
   void visit(FunctionDecl n);
 
   /*   FunctionDecl parent;
-   *   ArrayList<Instruction> instructions;
+   *   List<Instruction> instructions;
    *   Identifier return_id; */
   void visit(Block n);
 
@@ -83,6 +83,6 @@ public interface Visitor {
 
   /*   Identifier lhs;
    *   Identifier callee;
-   *   ArrayList<Identifier> args; */
+   *   List<Identifier> args; */
   void visit(Call n);
 }

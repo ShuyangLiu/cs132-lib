@@ -18,6 +18,14 @@ public class LabelInstr extends Instruction {
     v.visit(this, arg);
   }
 
+  public <A,R> R accept(ArgRetVisitor<A,R> v, A arg) {
+    return v.visit(this, arg);
+  }
+
+  public <R> R accept(RetVisitor<R> v){
+    return v.visit(this);
+  }
+
   public String toString() {
     return label + ":";
   }

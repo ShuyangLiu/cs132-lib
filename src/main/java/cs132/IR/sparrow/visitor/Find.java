@@ -13,7 +13,7 @@ public class Find extends DoNothing {
   }
 
   /*   FunctionDecl parent;
-   *   ArrayList<Instruction> instructions;
+   *   List<Instruction> instructions;
    *   Identifier return_id; */
   public void visit(Block n) {
     int i=0;

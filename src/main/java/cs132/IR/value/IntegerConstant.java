@@ -1,4 +1,4 @@
-package cs132.IR.value;
+package value;
   
 public class IntegerConstant implements Value {
   public int i;

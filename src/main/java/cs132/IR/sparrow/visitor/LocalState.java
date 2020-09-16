@@ -1,7 +1,7 @@
 package cs132.IR.sparrow.visitor;
 
 import cs132.IR.token.*;
-import cs132.IR.value.*;
+import value.*;
 import cs132.IR.sparrow.Block;
 import java.util.Map;
 

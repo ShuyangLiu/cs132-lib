@@ -5,7 +5,7 @@ import cs132.IR.sparrowv.*;
 
 public class SetParents extends DepthFirst {
 
-  /*   ArrayList<FunctionDecl> funDecls; */
+  /*   List<FunctionDecl> funDecls; */
   public void visit(Program n) {
     for (FunctionDecl fd: n.funDecls) {
         fd.parent = n;
@@ -15,7 +15,7 @@ public class SetParents extends DepthFirst {
 
   /*   Program parent;
    *   FunctionName functionName;
-   *   ArrayList<Identifier> formalParameters;
+   *   List<Identifier> formalParameters;
    *   Block block; */
   public void visit(FunctionDecl n) {
     n.block.parent = n;
@@ -23,7 +23,7 @@ public class SetParents extends DepthFirst {
   }
 
   /*   FunctionDecl parent;
-   *   ArrayList<Instruction> instructions;
+   *   List<Instruction> instructions;
    *   Identifier return_id ; */
   public void visit(Block n) {
     for (Instruction i: n.instructions) {

@@ -3,7 +3,6 @@ package cs132.IR.errors;
 import cs132.IR.token.*;
 import cs132.IR.registers.Registers;
 import java.util.List;
-import java.util.ArrayList;
 
 public class ErrorReport {
  

@@ -2,14 +2,14 @@ package cs132.IR.sparrow;
 
 import cs132.IR.token.*;
 import cs132.IR.sparrow.visitor.*;
-import java.util.ArrayList;
+import java.util.List;
 
 public class Call extends Instruction {
   public Identifier lhs;
   public Identifier callee;
-  public ArrayList<Identifier> args;
+  public List<Identifier> args;
 
-  public Call(Identifier lhs, Identifier callee, ArrayList<Identifier> args) {
+  public Call(Identifier lhs, Identifier callee, List<Identifier> args) {
     this.lhs = lhs ;
     this.callee = callee;
     this.args = args;
@@ -21,6 +21,14 @@ public class Call extends Instruction {
 
   public <A> void accept(ArgVisitor<A> v, A arg) {
     v.visit(this, arg);
+  }
+
+  public <A,R> R accept(ArgRetVisitor<A,R> v, A arg) {
+    return v.visit(this, arg);
+  }
+
+  public <R> R accept(RetVisitor<R> v){
+    return v.visit(this);
   }
 
   public String toString() {

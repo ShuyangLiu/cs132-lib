@@ -12,7 +12,7 @@ public class GetFunctionDecl extends DoNothing {
     this.ce = ce;
   }
 
-  /*   ArrayList<FunctionDecl> funDecls; */
+  /*   List<FunctionDecl> funDecls; */
   public void visit(Program n) {
     for (FunctionDecl fd: n.funDecls) {
       if (fd.functionName.toString().equals(ce.toString())) {

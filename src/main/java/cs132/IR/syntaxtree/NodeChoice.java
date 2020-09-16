@@ -7,7 +7,7 @@ package cs132.IR.syntaxtree;
 /**
  * Represents a grammar choice, e.g. ( A | B )
  */
-public class NodeChoice implements cs132.IR.syntaxtree.Node {
+public class NodeChoice implements Node {
    public NodeChoice(Node node) {
       this(node, -1);
    }
@@ -29,7 +29,6 @@ public class NodeChoice implements cs132.IR.syntaxtree.Node {
    public <A> void accept(cs132.IR.visitor.GJVoidVisitor<A> v, A argu) {
       choice.accept(v,argu);
    }
-
 
    public Node choice;
    public int which;

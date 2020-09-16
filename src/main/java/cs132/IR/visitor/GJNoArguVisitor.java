@@ -4,7 +4,6 @@
 
 package cs132.IR.visitor;
 import cs132.IR.syntaxtree.*;
-
 import java.util.*;
 
 /**

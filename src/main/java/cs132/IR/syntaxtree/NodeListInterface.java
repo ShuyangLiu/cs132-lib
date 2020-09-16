@@ -15,12 +15,8 @@ public interface NodeListInterface extends Node {
    public int size();
 
    public void accept(cs132.IR.visitor.Visitor v);
-
    public <R,A> R accept(cs132.IR.visitor.GJVisitor<R,A> v, A argu);
-
    public <R> R accept(cs132.IR.visitor.GJNoArguVisitor<R> v);
-
    public <A> void accept(cs132.IR.visitor.GJVoidVisitor<A> v, A argu);
-
 }
 

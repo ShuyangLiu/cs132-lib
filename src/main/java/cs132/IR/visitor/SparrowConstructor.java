@@ -1,7 +1,6 @@
 package cs132.IR.visitor;
 
 import cs132.IR.syntaxtree.*;
-
 import cs132.IR.sparrow.visitor.*;
 import cs132.IR.registers.Registers;
 import java.util.*;

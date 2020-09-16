@@ -4,7 +4,6 @@
 
 package cs132.IR.visitor;
 import cs132.IR.syntaxtree.*;
-
 import java.util.*;
 
 /**
@@ -232,7 +231,7 @@ public interface Visitor {
     */
    public void visit(StringLiteral n);
 
-    void visit(If anIf);
+    public void visit(If n);
 
    public void visit(LabeledInstruction n);
 }

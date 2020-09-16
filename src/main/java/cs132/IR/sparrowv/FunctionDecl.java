@@ -3,18 +3,17 @@ package cs132.IR.sparrowv;
 import cs132.IR.token.*;
 import cs132.IR.sparrowv.visitor.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
 
 public class FunctionDecl {
   public Program parent;
 
   public FunctionName functionName;
-  public ArrayList<Identifier> formalParameters;
+  public List<Identifier> formalParameters;
   public Block block;
 
   public FunctionDecl(FunctionName functionName,
-                      ArrayList<Identifier> formalParameters,
+                      List<Identifier> formalParameters,
                       Block block) {
     this.functionName = functionName;
     this.formalParameters = formalParameters;
@@ -27,6 +26,14 @@ public class FunctionDecl {
 
   public <A> void accept(ArgVisitor<A> v, A arg) {
     v.visit(this, arg);
+  }
+
+  public <A,R> R accept(ArgRetVisitor<A,R> v, A arg) {
+    return v.visit(this, arg);
+  }
+
+  public <R> R accept(RetVisitor<R> v){
+    return v.visit(this);
   }
 
   public String toString() {
@@ -42,14 +49,4 @@ public class FunctionDecl {
     res = res + ")\n" + block.toString() + "\n\n";
     return res;
   }
-
-    public int index_arg (String name){
-        for (int i = 0 ; i < formalParameters.size(); ++i){
-            if (formalParameters.get(i).toString().equals(name)) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
 }

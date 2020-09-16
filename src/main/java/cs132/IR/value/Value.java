@@ -1,4 +1,4 @@
-package cs132.IR.value;
+package value;
 
 public interface Value {
   public String toString();

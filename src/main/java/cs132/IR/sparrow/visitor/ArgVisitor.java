@@ -1,21 +1,20 @@
 package cs132.IR.sparrow.visitor;
 
-import cs132.IR.token.*;
 import cs132.IR.sparrow.*;
 
 public interface ArgVisitor<A> {
 
-  /*   ArrayList<FunctionDecl> funDecls; */
+  /*   List<FunctionDecl> funDecls; */
   void visit(Program n, A arg);
 
   /*   Program parent;
    *   FunctionName functionName;
-   *   ArrayList<Identifier> formalParameters;
+   *   List<Identifier> formalParameters;
    *   Block block; */
   void visit(FunctionDecl n, A arg);
 
   /*   FunctionDecl parent;
-   *   ArrayList<Instruction> instructions;
+   *   List<Instruction> instructions;
    *   Identifier return_id; */
   void visit(Block n, A arg);
 
@@ -83,6 +82,6 @@ public interface ArgVisitor<A> {
 
   /*   Identifier lhs;
    *   Identifier callee;
-   *   ArrayList<Identifier> args; */
+   *   List<Identifier> args; */
   void visit(Call n, A arg);
 }

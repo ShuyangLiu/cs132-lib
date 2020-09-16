@@ -5,19 +5,19 @@ import cs132.IR.sparrow.*;
 
 public class DoNothing implements Visitor {
 
-  /*   ArrayList<FunctionDecl> funDecls; */
+  /*   List<FunctionDecl> funDecls; */
   public void visit(Program n) {
   }
 
   /*   Program parent;
    *   FunctionName functionName;
-   *   ArrayList<Identifier> formalParameters;
+   *   List<Identifier> formalParameters;
    *   Block block; */
   public void visit(FunctionDecl n) {
   }
 
   /*   FunctionDecl parent;
-   *   ArrayList<Instruction> instructions;
+   *   List<Instruction> instructions;
    *   Identifier return_id; */
   public void visit(Block n) {
   }
@@ -101,7 +101,7 @@ public class DoNothing implements Visitor {
 
   /*   Identifier lhs;
    *   Identifier callee;
-   *   ArrayList<Identifier> args; */
+   *   List<Identifier> args; */
   public void visit(Call n) {
   }
 }
