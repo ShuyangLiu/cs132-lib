@@ -29,6 +29,6 @@ public class ErrorMessage extends Instruction {
   }
 
   public String toString() {
-    return "error(" + msg + ")";
+    return "error(\"" + msg + "\")";
   }
 }
